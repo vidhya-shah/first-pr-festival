@@ -1,0 +1,418 @@
+<!--
+  SPIDER-ID CARD — vidhyashah34's build (dynamic)
+
+  Text is rendered purely via CSS attr() from the four data-
+  attributes on .spider-card — no duplication in the markup, no JS.
+  Reskin by editing the data- values below and the vars in :root.
+
+  NOTE: rename this file to <your-actual-github-username>.html
+  before submitting — "vidhyashah34" was used as a placeholder
+  derived from the email you gave me.
+-->
+<div
+  class="spider-card"
+  data-name="VIDHYA SHAH"
+  data-alias="Venom-Byte"
+  data-web="Build · Design · Ship"
+  data-house="WEB-SLINGER // ACTIVE"
+>
+  <div class="border-spin" aria-hidden="true"></div>
+  <div class="grid-bg" aria-hidden="true"></div>
+  <div class="glow glow-a" aria-hidden="true"></div>
+  <div class="glow glow-b" aria-hidden="true"></div>
+  <div class="scanline" aria-hidden="true"></div>
+  <div class="sheen" aria-hidden="true"></div>
+
+  <div class="panel">
+    <header class="head">
+      <span class="dot"></span>
+      <span class="brand">SPIDER::ID</span>
+      <span class="ver">v3.0</span>
+    </header>
+
+    <div class="avatar-wrap" aria-hidden="true">
+      <div class="avatar-ring"></div>
+      <div class="avatar">
+        <svg viewBox="0 0 64 64" width="56" height="56">
+          <defs>
+            <linearGradient id="av" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#39ffd8" />
+              <stop offset="100%" stop-color="#6f6bff" />
+            </linearGradient>
+          </defs>
+          <rect x="2" y="2" width="60" height="60" rx="16" fill="none" stroke="url(#av)" stroke-width="1.6" opacity="0.7" />
+          <path d="M32 12 L48 20 V38 C48 48 40 54 32 58 C24 54 16 48 16 38 V20 Z"
+                fill="rgba(57,255,216,0.08)" stroke="url(#av)" stroke-width="1.4" />
+          <path d="M32 20 L32 58 M20 26 L44 26 M18 34 L46 34 M20 42 L44 42"
+                stroke="url(#av)" stroke-width="1" opacity="0.7" fill="none" />
+        </svg>
+      </div>
+    </div>
+
+    <div class="identity">
+      <span class="alias"></span>
+      <span class="name"></span>
+    </div>
+
+    <div class="chips">
+      <span class="chip">UX</span>
+      <span class="chip">JS</span>
+      <span class="chip">FIGMA</span>
+      <span class="chip">API</span>
+    </div>
+
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-top"><span>PROJECTS SHIPPED</span><b>34</b></div>
+        <div class="track"><i style="--w:86%"></i></div>
+      </div>
+      <div class="stat">
+        <div class="stat-top"><span>RELIABILITY</span><b>98.7%</b></div>
+        <div class="track"><i style="--w:97%"></i></div>
+      </div>
+      <div class="stat">
+        <div class="stat-top"><span>WEB-SENSE</span><b>91%</b></div>
+        <div class="track"><i style="--w:91%"></i></div>
+      </div>
+    </div>
+
+    <footer class="foot">
+      <span class="web"></span>
+      <span class="house"></span>
+    </footer>
+  </div>
+
+  <span class="corner tl"></span>
+  <span class="corner tr"></span>
+  <span class="corner bl"></span>
+  <span class="corner br"></span>
+</div>
+
+<style>
+  :root {
+    --bg-0: #060810;
+    --bg-1: #0a0f1e;
+    --glass: rgba(255, 255, 255, 0.04);
+    --glass-border: rgba(255, 255, 255, 0.10);
+    --cyan: #39ffd8;
+    --violet: #7c6bff;
+    --ink: #dfe6f5;
+    --ink-dim: rgba(223, 230, 245, 0.55);
+  }
+
+  .spider-card, .spider-card * { box-sizing: border-box; }
+
+  @keyframes spin { to { transform: rotate(360deg); } }
+  @keyframes pulse-a { 0%, 100% { opacity: 0.9; transform: scale(1); } 50% { opacity: 1; transform: scale(1.12); } }
+  @keyframes pulse-b { 0%, 100% { opacity: 0.7; transform: scale(1); } 50% { opacity: 1; transform: scale(1.08); } }
+  @keyframes sweep { 0% { transform: translateX(-120%) rotate(8deg); } 100% { transform: translateX(220%) rotate(8deg); } }
+  @keyframes float-y { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+  @keyframes dot-pulse { 0%, 100% { box-shadow: 0 0 8px var(--cyan), 0 0 2px var(--cyan); } 50% { box-shadow: 0 0 16px var(--cyan), 0 0 6px var(--cyan); } }
+  @keyframes fill-in { from { width: 0; } }
+
+  .spider-card {
+    position: relative;
+    width: 320px;
+    height: 440px;
+    border-radius: 22px;
+    overflow: hidden;
+    font-family: "SF Mono", "Consolas", "Segoe UI", ui-monospace, monospace;
+    color: var(--ink);
+    background: radial-gradient(120% 90% at 50% 0%, var(--bg-1) 0%, var(--bg-0) 65%);
+    box-shadow:
+      0 0 0 1px rgba(255, 255, 255, 0.06),
+      0 30px 60px rgba(0, 0, 0, 0.6),
+      0 0 60px rgba(57, 255, 216, 0.06);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+  }
+  .spider-card:hover {
+    transform: translateY(-6px) scale(1.015);
+    box-shadow:
+      0 0 0 1px rgba(255, 255, 255, 0.08),
+      0 40px 70px rgba(0, 0, 0, 0.65),
+      0 0 90px rgba(57, 255, 216, 0.14);
+  }
+
+  .border-spin {
+    position: absolute;
+    z-index: 0;
+    inset: -40%;
+    background: conic-gradient(
+      from 0deg,
+      transparent 0deg,
+      var(--cyan) 25deg,
+      transparent 90deg,
+      var(--violet) 200deg,
+      transparent 260deg
+    );
+    animation: spin 7s linear infinite;
+    opacity: 0.55;
+  }
+
+  .grid-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+    background-size: 22px 22px;
+    -webkit-mask-image: radial-gradient(circle at 50% 30%, black 0%, black 30%, transparent 75%);
+    mask-image: radial-gradient(circle at 50% 30%, black 0%, black 30%, transparent 75%);
+  }
+
+  .glow {
+    position: absolute;
+    z-index: 0;
+    border-radius: 50%;
+    filter: blur(6px);
+  }
+  .glow-a {
+    top: -90px;
+    left: -60px;
+    width: 220px;
+    height: 220px;
+    background: radial-gradient(circle, rgba(57, 255, 216, 0.30), transparent 70%);
+    animation: pulse-a 6s ease-in-out infinite;
+  }
+  .glow-b {
+    bottom: -100px;
+    right: -70px;
+    width: 240px;
+    height: 240px;
+    background: radial-gradient(circle, rgba(124, 107, 255, 0.28), transparent 70%);
+    animation: pulse-b 7s ease-in-out infinite 1.5s;
+  }
+
+  .sheen {
+    position: absolute;
+    z-index: 2;
+    top: -20%;
+    left: 0;
+    width: 40%;
+    height: 140%;
+    background: linear-gradient(
+      100deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.06) 45%,
+      rgba(57, 255, 216, 0.12) 50%,
+      rgba(255, 255, 255, 0.06) 55%,
+      transparent 100%
+    );
+    animation: sweep 5.5s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  .scanline {
+    position: absolute;
+    z-index: 2;
+    inset: 0;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.025) 0px,
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px,
+      transparent 3px
+    );
+    opacity: 0.5;
+  }
+
+  .panel {
+    position: relative;
+    z-index: 1;
+    margin: 11px;
+    height: calc(100% - 22px);
+    border-radius: 16px;
+    border: 1px solid var(--glass-border);
+    background: var(--glass);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    padding: 16px 18px 14px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .head {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--ink-dim);
+  }
+  .head .dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--cyan);
+    animation: dot-pulse 2s ease-in-out infinite;
+  }
+  .brand {
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: 3px;
+  }
+  .ver {
+    margin-left: auto;
+    color: rgba(223, 230, 245, 0.35);
+  }
+
+  .avatar-wrap {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 14px 0 8px;
+    animation: float-y 4s ease-in-out infinite;
+  }
+  .avatar-ring {
+    position: absolute;
+    width: 74px;
+    height: 74px;
+    border-radius: 50%;
+    border: 1px dashed rgba(57, 255, 216, 0.4);
+    animation: spin 10s linear infinite;
+  }
+  .avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(0 0 10px rgba(57, 255, 216, 0.25));
+  }
+
+  .identity {
+    text-align: center;
+    line-height: 1.25;
+  }
+  .alias, .name { display: block; }
+  .alias::before { content: attr(data-alias); }
+  .name::before { content: attr(data-name); }
+  .spider-card[data-alias] .alias::before { content: attr(data-alias); }
+  .spider-card[data-name] .name::before { content: attr(data-name); }
+
+  .alias {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: var(--cyan);
+    text-shadow: 0 0 10px rgba(57, 255, 216, 0.45);
+  }
+  .name {
+    margin-top: 4px;
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    background: linear-gradient(90deg, #ffffff, #c9d4ff 55%, var(--violet));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .chips {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin: 12px 0 2px;
+    flex-wrap: wrap;
+  }
+  .chip {
+    font-size: 9px;
+    letter-spacing: 1px;
+    padding: 3px 9px;
+    border-radius: 999px;
+    border: 1px solid var(--glass-border);
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--ink-dim);
+    transition: border-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+  }
+  .spider-card:hover .chip {
+    border-color: rgba(57, 255, 216, 0.4);
+    color: var(--ink);
+    box-shadow: 0 0 8px rgba(57, 255, 216, 0.15);
+  }
+
+  .stats {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    padding: 12px 0 6px;
+  }
+  .stat-top {
+    display: flex;
+    justify-content: space-between;
+    font-size: 9px;
+    letter-spacing: 1px;
+    color: var(--ink-dim);
+    margin-bottom: 4px;
+  }
+  .stat-top b {
+    color: var(--ink);
+    font-weight: 700;
+    letter-spacing: 0;
+  }
+  .track {
+    height: 5px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--glass-border);
+    overflow: hidden;
+  }
+  .track i {
+    display: block;
+    height: 100%;
+    width: var(--w);
+    border-radius: 4px;
+    background: linear-gradient(90deg, var(--cyan), var(--violet));
+    box-shadow: 0 0 8px rgba(57, 255, 216, 0.5);
+    animation: fill-in 1.4s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  }
+  .stat:nth-child(1) .track i { animation-delay: 0.1s; }
+  .stat:nth-child(2) .track i { animation-delay: 0.3s; }
+  .stat:nth-child(3) .track i { animation-delay: 0.5s; }
+
+  .foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    font-size: 9px;
+    padding-top: 10px;
+    margin-top: 10px;
+    border-top: 1px solid var(--glass-border);
+    color: var(--ink-dim);
+  }
+  .web::before { content: attr(data-web); }
+  .house::before { content: attr(data-house); }
+  .spider-card[data-web] .web::before { content: attr(data-web); }
+  .spider-card[data-house] .house::before { content: attr(data-house); }
+  .house {
+    text-align: right;
+    max-width: 55%;
+    font-weight: 700;
+    color: var(--cyan);
+    text-shadow: 0 0 8px rgba(57, 255, 216, 0.3);
+  }
+
+  .corner {
+    position: absolute;
+    z-index: 3;
+    width: 14px;
+    height: 14px;
+    opacity: 0.8;
+  }
+  .corner.tl { top: 14px; left: 14px; border-top: 2px solid var(--cyan); border-left: 2px solid var(--cyan); border-radius: 4px 0 0 0; }
+  .corner.tr { top: 14px; right: 14px; border-top: 2px solid var(--violet); border-right: 2px solid var(--violet); border-radius: 0 4px 0 0; }
+  .corner.bl { bottom: 14px; left: 14px; border-bottom: 2px solid var(--violet); border-left: 2px solid var(--violet); border-radius: 0 0 0 4px; }
+  .corner.br { bottom: 14px; right: 14px; border-bottom: 2px solid var(--cyan); border-right: 2px solid var(--cyan); border-radius: 0 0 4px 0; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .spider-card,
+    .spider-card * {
+      animation: none !important;
+      transition: none !important;
+    }
+  }
+</style>
+
